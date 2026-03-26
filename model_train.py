@@ -46,6 +46,6 @@ model.compile(optimizer='adam', loss=MeanSquaredError())
 model.fit(X, y, epochs=20, batch_size=32)
 
 # Save
-model.save("model.keras")
+model.save("model.h5")
 joblib.dump(scaler, "scaler.pkl")
 

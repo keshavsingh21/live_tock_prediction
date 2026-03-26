@@ -141,7 +141,12 @@ with st.spinner(f"🔄 Loading {selected_company} data & training model..."):
 
 
     try:
+
+
         model = load_model("model.keras",compile = False)
+
+        model = load_model("model.h5",compile=False)
+
         scaler = joblib.load("scaler.pkl")
     except Exception as e:
         st.error(f"❌ Actual error: {e}")
